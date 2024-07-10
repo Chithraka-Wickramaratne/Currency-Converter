@@ -30,13 +30,10 @@ class _IndexState extends State<Index> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            
             Image.asset(
               'assets/convert.png',
-              height: 400, 
+              height: 400,
               width: 500,
-              
-
             ),
             Padding(
               padding: const EdgeInsets.all(35.0),
@@ -54,7 +51,8 @@ class _IndexState extends State<Index> {
                   MaterialButton(
                     onPressed: () {
                       setState(() {
-                        double dollars = double.tryParse(amountController.text) ?? 0;
+                        double dollars =
+                            double.tryParse(amountController.text) ?? 0;
                         convertedAmount = dollars * 304.31;
                       });
                     },
@@ -86,4 +84,3 @@ class _IndexState extends State<Index> {
     );
   }
 }
-
